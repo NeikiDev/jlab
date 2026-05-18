@@ -1,0 +1,121 @@
+name: Bug report
+description: Something is broken on jlab.threat.rip (web app or public API).
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+
+        **Before filing**, please check the [open issues](https://github.com/NeikiDev/jlab/issues?q=is%3Aissue) to see if it has already been reported.
+
+        If this is a **security vulnerability**, do not file it here. Email `admin@threat.rip` instead, see [SECURITY.md](https://github.com/NeikiDev/jlab/blob/main/SECURITY.md).
+
+        Bugs in the **desktop client** belong in [NeikiDev/jlab-desktop](https://github.com/NeikiDev/jlab-desktop/issues).
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did the bug happen?
+      options:
+        - Web app (jlab.threat.rip)
+        - Public API (jlab.threat.rip/api/...)
+        - API docs page
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: A clear description of the bug. What did you expect to happen, and what did you see instead?
+      placeholder: |
+        I uploaded a 5 MB JAR and the result page stayed blank.
+        I expected to see the severity breakdown.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps so we can reproduce on our side.
+      value: |
+        1. Open `https://jlab.threat.rip/...`
+        2. Click on `...`
+        3. Observe `...`
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Page URL or API endpoint
+      description: The exact URL where the issue happened. Strip any auth tokens before pasting.
+      placeholder: "https://jlab.threat.rip/scan/abc123"
+    validations:
+      required: false
+
+  - type: input
+    id: scan_id
+    attributes:
+      label: Scan ID (if you have one)
+      description: Visible in the URL after a successful scan, or in the response JSON.
+      placeholder: "abc123-..."
+    validations:
+      required: false
+
+  - type: input
+    id: when
+    attributes:
+      label: When did it happen? (UTC)
+      description: Approximate timestamp helps us correlate with server logs. Use UTC.
+      placeholder: "2026-05-18 18:30 UTC"
+    validations:
+      required: false
+
+  - type: input
+    id: http_status
+    attributes:
+      label: HTTP status (if known)
+      description: Open dev tools (F12), Network tab, find the failing request. Include `Retry-After` if it was a 429.
+      placeholder: "429 (Retry-After: 30)"
+    validations:
+      required: false
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: "Firefox 124 on Windows 11"
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console / network errors
+      description: Paste any red errors from the browser console or the failing response body. No need to format, it will be auto-rendered.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, recordings, related issues, anything that helps.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: agreements
+    attributes:
+      label: Confirmations
+      options:
+        - label: I have searched existing issues and this is not a duplicate.
+          required: true
+        - label: I am not attaching malicious JAR samples to this public issue. If a sample is needed I will share it via `admin@threat.rip`.
+          required: true
