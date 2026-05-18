@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Desktop client issues
+    url: https://github.com/NeikiDev/jlab-desktop/issues
+    about: Bugs and feature requests for the Windows / macOS / Linux desktop app live in the jlab-desktop repo.
+  - name: Security vulnerability
+    url: https://github.com/NeikiDev/jlab/blob/main/SECURITY.md
+    about: Do not file vulnerabilities in public issues. Email admin@threat.rip instead.
+  - name: API documentation
+    url: https://jlab.threat.rip/api-docs.html
+    about: Reference for the public static-scan endpoint, request format, limits, and response shape.
+  - name: Community chat
+    url: https://www.threat.rip/discord
+    about: Ask questions, get help, or chat with other JLab users on Discord.
