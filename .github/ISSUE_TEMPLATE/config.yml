@@ -5,7 +5,7 @@ contact_links:
     about: Bugs and feature requests for the Windows / macOS / Linux desktop app live in the jlab-desktop repo.
   - name: Security vulnerability
     url: https://github.com/NeikiDev/jlab/blob/main/SECURITY.md
-    about: Do not file vulnerabilities in public issues. Email admin@threat.rip instead.
+    about: Do not file vulnerabilities in public issues. Email jlab-issues@threat.rip instead.
   - name: API documentation
     url: https://jlab.threat.rip/api-docs.html
     about: Reference for the public static-scan endpoint, request format, limits, and response shape.

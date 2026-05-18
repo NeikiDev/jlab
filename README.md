@@ -28,7 +28,7 @@ A short checklist so we can act on the report:
 
 ## Contact
 
-- General: `admin@threat.rip`
+- General: `jlab-issues@threat.rip`
 - Community: [threat.rip/discord](https://www.threat.rip/discord)
 - Security: see [SECURITY.md](./SECURITY.md)
 

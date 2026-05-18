@@ -6,7 +6,7 @@ If you believe you have found a security vulnerability in JLab (the web app
 at `jlab.threat.rip`, the public API, or any related infrastructure), please
 report it privately.
 
-**Email:** `admin@threat.rip`
+**Email:** `jlab-issues@threat.rip`
 
 **Please include:**
 
